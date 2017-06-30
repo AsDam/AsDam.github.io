@@ -1,11 +1,16 @@
 * {
 	list-style:none;
 	margin:0PX;
+	position:relative;
+	text-decoration:none;
 }
 body {
 	 background:#fff;
      color:#000;  
 	 text-align:center;
+}
+ul,ol{
+	list-style:none;
 }
 .ir-arriba{
 	transform:rotate(180deg);
@@ -14,15 +19,18 @@ body {
 	border-radius:30px;
 	display:none;
 	padding:10px 14px 15px 14px;
-	background:rgba(0,0,0,0.8);
-	font-size:25px;
+    background: linear-gradient(45deg, rgba(144, 144, 144, 0.67) 0%,rgba(113, 113, 113, 0.59) 25%,rgba(177, 176, 176, 0.74) 50%,rgba(71, 71, 71, 0.75) 75%,rgba(0, 0, 0, 0.69) 100%);
 	color:#fff;
 	cursor:pointer;
 	position: fixed;
 	bottom:20px;
 	right:20px;
+	z-index:100;
+	box-shadow:2px 2px 5px #999;
 }
-
+@media screen {
+	
+}
 ul{
      margin:0;
 	 padding:0;
@@ -32,14 +40,6 @@ header {
 	margin-top:10px;
     width: 100%;
     overflow: hidden;
-    position:fixed;
-    background:url(IMAGENES//cabezera.jpg);
-     background-repeat:no-repeat;
-     background-size:100% 100%;
-     position:relative;
-	min-height:300px;
-	max-width:100%;
-	width:100%;
 }
 nav {
     top:-20px;
@@ -48,6 +48,7 @@ nav {
     right:0;
 	margin:20px auto;
 	width:100%;
+	z-index:300;
 }
 body > div > div ul li{
 	 text-align:left;
@@ -59,8 +60,9 @@ nav ul {
 nav > ul {
 	 display:table;
 	 width:100%;
-	 background:rgba(0,0,0, .7);
+	 background:rgba(225,225,225,.9);
 	 background-attachment:fixed;
+	 color:#000;
 }
 nav> ul li{
 	max-width:25%;
@@ -90,10 +92,11 @@ nav > ul > li > ul {
 	width:25%;
 }
 nav > ul li a {
-	color:#fff;
+	color:#000;
 	display:block;
 	line-height:20px;
 	padding:20px;
+	font-size:20px;
 	position: relative;
 	text-align:center;
 	text-decoration:none;
@@ -125,6 +128,7 @@ nav > ul > li > a span {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
+	color:#fff;
 }
 nav > ul > li > a span .icon {
 	display:block;
@@ -135,28 +139,25 @@ nav > ul > li > a:hover > span {
 }
 /*Colores*/
 nav ul li a .primero {
-	background:#0e5061;
+	background: linear-gradient(0deg, #0e5061 0%, #1d849f 100%);
 }
 nav ul li a .segundo{
-	background:#5da5a2;
+	background:linear-gradient(0deg, #365a6b 0%, #5da5a2 100%);
 }
 nav ul li a .tercero{
-	background:#f25724;
-}
-nav ul li a .cuarto{
-	background:#174459;
+	background:linear-gradient(0deg, #1b439c 0%, #1e759e 100%);
 }
 .social{
 	margin:0;
 	padding:0;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
-	box_sizing:border-box;
+	box-sizing:border-box;
 }
 .social{
 	 position: fixed;
 	 left: 0;
-	 top:40%;
+	 top:43%;
 	 z-index:2000;
 }
 .social{
@@ -175,59 +176,288 @@ nav ul li a .cuarto{
 	 -o-transition:all 500ms ease;
 	 transition:all 500ms ease;
 }
-.social ul li .icon-mail {
-	 background:#666666;
+
+.social ul li .icon-mail2{
+    background: linear-gradient(45deg, #ffffff 0%,#d4d4d4 25%,#dedede 50%,#ffffff 75%,#9e9e9e 100%);
+    color: #bb0101;
 }
-.social ul li .icon-google-plus {
-	 background:#d95232;
+.social ul li .icon-tumblr{
+      background:linear-gradient(95deg, #4151c4 0%, #0b0a5b 100%);
 }
 .social ul li .icon-twitter {
-	 background:#00abf0;
+	  background:linear-gradient(95deg, #07dddd 0%, #127787 100%);
 }
 .social ul li .icon-facebook {
-	 background:#3b5998;
+	 background: linear-gradient(95deg, #0570d4 0%, rgb(13, 31, 153) 100%)
 }
 .social ul li .icon-whatsapp {
-	 background:#065E52;
+	 background: linear-gradient(95deg, #2a8712 0%, rgb(14, 84, 25) 100%);
+}
+.social ul li .icon-instagram {
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  }
+.social ul li .icon-youtube {
+	 background:linear-gradient(95deg, #dd0707 0%, #871212 100%);
 }
 .social ul li a:hover{
-     padding: 11px 30px;
+     padding: 11px 20px;
 }
-.cuerpo{
-     background:#fff;
-	 margin:50px 0px 0px 0px;
-	 padding:20px;	
-     font-size:30px;
+
+.explicacion{ 
+    background-image: linear-gradient(45deg, #8a6a2f 0%,#b19050 25%,#c8884f 50%,#c77c26 75%,#cd8027 100%);	margin-top:-5px;
+	margin-bottom:10px;
+	padding:60px;
+	color:#000;
+	text-transform:uppercase;
 }
-.caja{
-     background:#5A5A5A;
-     color:#fff;
-	 margin:0px 0px 0px 0px;
-	 padding:80px 0px;	
-     font-size:30px;
+.anuncio{
+	position:relative;
+	width:60%;
+	margin:40px 20%;
 }
-h1{
+.anuncio a {
+	box-shadow:2px 2px 5px #999;
+}
+img{
 	width:100%;
-	height:72;
 }
-select{
-	 background:#fff;
+footer{
+   background:rgba(0, 0, 0, .8);
+   color:#fff;
+   padding:20px;
+   margin-top:30px;
+   margin-bottom:0px;
 }
-hr{
-	 margin:0px 0px;
+
+ h3{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7) 0%, rgb(255, 255, 255) 100%); 	padding-top:40px;
+	position:relative;
+	border:1px;
+	border-style:solid;
+	width:150px;
+	height:100px;
+	z-index:1;
+	border-color:#999;
 }
-.pie{
-	 background:rgba(0,0,0,0.8);
-     color:#fff;
-	 text-align:center;
-	 background-attachment:fixed;
+.icon-circle-down{
+	position:relative;
+	z-index:2;
+	font-size:22px;
+	padding:2px;
+	color:#e5e2e2;
+	background:#999;
+	border-radius:30px;
+}
+
+.menu> div{
+	margin-left:8%;
+	position:relative;
+	left:-50px;
+}
+.hover:hover{
+	cursor: pointer;
+}
+.hover:hover>h3{
+	margin-top:-20px;
+	position:relative;
+ 	margin-left:-10px;
+ 	margin-right:-15px;
+	width:170px;
+	height:120px;
+	z-index:1;
+	box-shadow: 2px 2px 5px #999;
+}
+.hover:hover>h2{
+	position:relative;
+ 	margin-left:-10px;
+ 	margin-right:-10px;
+	width:170px;
+	z-index:1; 
+	margin-bottom:-16px;
+	height:30px;
+	box-shadow: 2px 2px 5px #999;
+}
+h2{
+	padding-bottom:-3px;
+	border:1px;
+	border-style:solid;
+	width:150px;
+	border-top:0px;
+    z-index:1;
+    border-color:#999;
+}
+div.AS div.hover h2{
+	background:#228c8c;
+}
+div div.hover h2{
+	background:#4caf50;
+}
+div div.hover h2.asdam{
+	background:#cc4b4b;
+}
+h2 a{
+    color:#ccc;
+}
+.menu{
+	position:relative;
+	margin-top:0px;
+	margin-bottom:10px;
+    z-index:2;
+    box-sizing:border-box;
+}
+.menu div{
+	position:relative;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+	box-sizing:border-box;
+	z-index:2;
+}
+.lapiz, img{
+	z-index:0;
+}
+div.menu{
+     z-index:2;
+}
+.compra{
+	width:80%;
+	margin:0px 6%;
+	padding-bottom:60px;
+}
+div.contenedor div.compra div.o{
+    width:30%;
+    background:#ddd;
+    height:100px;
+    margin-left:100px;
+    margin-top:30px;
+    padding-top:40px;
+    border:1px;
+    border-style:dashed;
+    border-color:#999999;
+}
+.compra div{
+	display:inline-block;
+	position:relative;
+}
+/*slider*/
+.lapiz{
+	margin-top:50px;
      position:relative;
+     height:400px;
+	max-width:100%;
+	width:100%;
+	z-index:0;
 }
-.pie{
-	 top:70px;
-	 bottom:;
-	 right:;
-	 left:;
-	 margin:100px 0px 0px 0px;
-	 padding:10px;
+.slider li, ul{
+    width:100%;
+}
+.slider li img{
+	width:100%;
+}
+.slider .anuncio{
+	position:absolute;
+	width:60%;
+	margin-top:7%; 
+	margin-left:20%;
+	height:50%;
+	top:0;
+	left:0;
+	background:rgba(225, 225, 225, .8);
+
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+
+	text-align:center;
+	z-index:1;
+}
+.left, .right{
+    position:absolute;
+    top:0;
+    height:100%;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    cursor:pointer;
+    font-size:35px;
+    z-index:90;
+}
+.left{
+	left:10px;
+}
+.right{
+	right:10px;
+}
+img{
+	position:relative;
+	z-index:1;
+}
+
+@media screen and(max-width:815px){
+	.compra{
+	    width:100%;
+	    margin:0% 0%;
+    }
+    div.contenedor div.compra div.o{
+        width:40%;
+        background:#ccc;
+        height:100px;
+        margin-left:100px;
+        margin-top:30px;
+        padding-top:40px;
+        border:1px;
+        border-style:dashed;
+    }
+}	
+nav ul li.im{
+	box-shadow:0px 2px 0px #CCC;
+
+}
+.icon-search{
+	color:#001;
+	position:fixed;
+	width:300px;
+	top:73px;
+	z-index:10;
+	right:-15px;
+	margin-right:0px;
+	font-size:17px; 
+}
+.busqueda{
+	position:fixed;
+	width:300px;
+	height:40px;
+	top:61px;
+	right:0px;
+	background:rgba(225, 225, 225, .9);
+	z-index:2;
+}
+.busqueda input{
+	width:210px;
+	right:0px;
+	top:10px;
+	z-index:12;
+	border-radius:5px;
+}
+input{
+	background:rgba(225,225,225,1);
+}
+.icon-credit-card, .icon-phone, .icon-ticket{
+	font-size:60px;
+	transform:rotate(80deg);
+	margin:0px;
+	color:#5b5b5b;
+}
+.tarjeta, .telefono, .ticket{
+	left:-270px;
+	margin:-32px;
+}
+.ticket{
+	left:-280px;
+	margin:-32px;
+}
+div.g-ytsuscribete{
+	display:block;
+	width:400px;
 }
